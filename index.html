@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <!-- moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- My js -->
+    <script src="assets/js/script.js"></script>
+    <title>Train Schedule</title>
+</head>
+<body>
+
+    <div class="container">
+
+<!-- Main Title -->
+        <div class="row">
+            <div class="col-lg-3">
+                &nbsp;
+            </div>
+            <div class="col-lg-6 bg-primary" style="color: white; border: 0; padding-top: 20px; padding-bottom: 20px">
+                <h1 class="text-center"><strong>Train Schedule</strong></h1>
+            </div>
+            <div class="col-lg-3">
+                &nbsp;
+            </div>
+        </div>
+        <br>
+
+<!-- Schedule Table -->
+<table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency(min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+
+<!-- User Input Form -->
+      <form>
+        <div class="form-group">
+          <label for="formTrainName">Train Name</label>
+          <input type="text" class="form-control" id="formTrainName">
+        </div>
+        <div class="form-group">
+          <label for="formDestination">Destination</label>
+          <input type="text" class="form-control" id="formDestination">
+        </div>
+        <div class="form-group">
+                <label for="formFirstTrain">First Train Time (HH:mm - military time)</label>
+                <input type="text" class="form-control" id="formFirstTrain">
+        </div>
+        <div class="form-group">
+                <label for="formFrequency">Frequency (min.)</label>
+                <input type="text" class="form-control" id="formFrequency">
+        </div>
+        <button class="btn btn-primary" id="submit" type="submit" value="Submit">Submit</button>
+      </form>
+
+    </div>
+</body>
+</html>
